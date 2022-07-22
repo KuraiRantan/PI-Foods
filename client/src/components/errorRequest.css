@@ -1,0 +1,8 @@
+.errorRequestContainer {
+    grid-column: 1/13;
+    grid-row: 2/12;
+}
+
+.errorRequestContainer img {
+    width: 20%;
+}

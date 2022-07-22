@@ -1,0 +1,98 @@
+.aside {
+    grid-column: 1/4;
+    grid-row: 2/11;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.mainRecipes {
+    grid-column: 4/13;
+    grid-row: 2/11;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.paginate {
+    grid-column: 1/13;
+    grid-row: 11/12;
+}
+
+.paginate a {
+    padding: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.searchContainer {
+    margin-bottom: 15px;
+}
+
+.searchContainer > label {
+    margin-right: 5px;
+}
+
+.linkOrder,
+.linkDiet {
+    text-decoration: none;
+    color: #5900F6;
+}
+
+.linkOrder:hover,
+.linkDiet:hover {
+    color: white;
+}
+
+.linkOrder {
+    margin-right: 10px;
+}
+
+.linkOrder:nth-last-child {
+    margin-right: 0;
+}
+
+.filterSelected{
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    padding: 2px 7px;
+    display: inline-block;
+}
+
+.filterSelectedContainer{
+    margin-bottom: 5px;
+}
+
+.filterSelected > button {
+    background-color: red;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.selectable {
+    cursor: pointer;
+}
+
+
+.card {
+    width: 30%;
+    background-color: darkkhaki;
+    min-width: 250px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.mainRecipes h1 {
+    width: 100%;
+}

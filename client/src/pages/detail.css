@@ -1,0 +1,13 @@
+.mainRecipeDetail {
+    grid-column: 1/13;
+    grid-row: 2/12;
+}
+
+.mainInfoContainer {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.imgRecipe {
+    border-radius: 15px;
+}

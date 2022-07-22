@@ -1,0 +1,47 @@
+.header {
+    padding: 10px 30px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    z-index: 100;
+}
+
+.headerLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerLinks a {
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.headerLinks a:hover {
+    background-color: #fff;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif; 
+    color: black;
+    font-size: 25px; 
+    font-style: italic; 
+    font-variant: small-caps; 
+    font-weight: 700; 
+    line-height: 27.5px;
+}
+
+.logo {
+    width: 100px;
+}
+
+
+.active {
+    background-color: #fff;
+}

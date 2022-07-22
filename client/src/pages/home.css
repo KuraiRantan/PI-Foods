@@ -1,0 +1,49 @@
+.mainLanding {
+    grid-column: 1/13;
+    grid-row: 2/12;
+    position: relative;
+}
+
+.mainLanding img {
+    position: relative;
+    z-index: -1;
+    opacity: .3;
+}
+
+.centerInImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centerInImage a {
+    display: inline-block;
+    width: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    color: #00f414;
+    border: 5px solid #00f414;
+    background-color: inherit;
+    /* box-shadow: 5px 5px 20px 6px white; */
+    font-weight: bold;
+    transition: padding .3s, width .3s;
+}
+
+.centerInImage p {
+    font-size: 25px;
+}
+
+.centerInImage p span {
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-style: italic; 
+    font-weight: bold;
+}
+
+.centerInImage a:hover {
+    width: 210px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}

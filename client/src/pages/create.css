@@ -1,0 +1,51 @@
+.form {
+    grid-column: 1/13;
+    grid-row: 2/12;
+    min-height: 100vh;
+}
+
+.formInputContainer {
+    margin-bottom: 20px;
+}
+
+.formInputsContainer {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.formInputCheckContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 15px;
+}
+
+.formInputStepContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.formInputStepContainer > input {
+    cursor: pointer;
+    background-color: red;
+    border: none;
+    border-radius: 3px;
+    margin-left: 2px;
+}
+
+.errors {
+    color: red;
+    font-weight: bold;
+}
+
+textarea {
+    height: 100px;
+    min-height: 22px;
+    min-width: 30%;
+    width: 80%;
+    max-width: 80%;
+}
+
+label {
+    display: block;
+}

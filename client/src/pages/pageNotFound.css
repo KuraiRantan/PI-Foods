@@ -1,0 +1,9 @@
+.pageNotFoundContainer {
+    grid-column: 1/13;
+    grid-row: 2/12;
+}
+
+
+.pageNotFoundContainer img {
+    width: 20%;
+}
