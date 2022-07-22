@@ -1,4 +1,4 @@
-const { getRecipes, getDetailRecipe, postRecipe } = require('../../controllers/recipes');
+const { getRecipes, getDetailRecipe, postRecipe } = require('../controllers/recipes');
 
 const router = require('express').Router();
 

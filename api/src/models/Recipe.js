@@ -19,19 +19,31 @@ module.exports = (sequelize) => {
       allowNull: false
     },
     healthScore: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      validate: {
+        isInt: true,
+        max: 100,
+        min: 0
+      }
     },
     stepByStep: {
       type: DataTypes.JSON,
-      get(){
+      get: function (){
         return JSON.parse(this.getDataValue("stepByStep"));
       },
-      set(value){
+      set: function(value){
+        if(typeof(value) === 'string') return value;
         return this.setDataValue("stepByStep", JSON.stringify(value));
       }
     },
     image:{
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
+      validate: {
+        isUrl: true
+      }
     }
+  },
+  {
+    timestamps: false
   });
 };
