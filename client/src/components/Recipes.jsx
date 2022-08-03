@@ -1,9 +1,3 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
-import { getUrlRequestApi } from "../helpers/url";
-import { getRecipes } from "../redux/actions";
-import Paginate from "./Paginate";
 import Recipe from "./Recipe";
 
 const Recipes = ({recipes}) => {

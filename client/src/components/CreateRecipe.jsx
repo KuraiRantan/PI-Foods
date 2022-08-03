@@ -18,7 +18,8 @@ const initialStateErrors = {
     summary: null,
     healthScore: null,
     image: null,
-    stepByStep: null
+    stepByStep: null,
+    diets: null
 }
 
 const CreateRecipe = () => {
@@ -74,20 +75,32 @@ const CreateRecipe = () => {
         }
 
         if(f.healthScore < 0 && f.healthScore > 100){
-            errors.healthScore = 'This field must be between 0 and 100.'
+            errors.healthScore = '*This field must be between 0 and 100.'
         }
 
-        if(f.image.trim() !== ''){
+        if(f.image.trim() === ''){
+            errors.image = '*This field is required.';
+        } else {
             if(!(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/.test(f.image))){
                 errors.image = 'This field is only url images.';
             }
+
         }
 
-        for(let s in f.stepByStep){
-            if(f.stepByStep[s].trim() === ''){
-                errors.stepByStep = 'All the steps that must add information, remove it(s) or add information.';
-                break;
+        if(Object.keys(f.stepByStep).length === 0){
+            errors.stepByStep = '*This field is required.';
+        } else {
+
+            for(let s in f.stepByStep){
+                if(f.stepByStep[s].trim() === ''){
+                    errors.stepByStep = 'All the steps that must add information, remove it(s) or add information.';
+                    break;
+                }
             }
+        }
+
+        if(f.diets.length === 0){
+            errors.diets = '*This field is required';
         }
 
         setFormErrors({...errors});
@@ -165,6 +178,7 @@ const CreateRecipe = () => {
                 
                 <div className="formInputContainer">
                     <h2>Diets</h2>
+                    {formErrors.diets !== null && <p className="errors">{formErrors.diets}</p>}
                     <div className="formInputCheckContainer">
                         {
                             dietsState.diets.map((diet, idx) => (<label key={idx+100}><input  type="checkbox" name="diets" value={diet.id} onChange={(e) => handlerTogleCheck(e, diet)} />{diet.name}</label>))

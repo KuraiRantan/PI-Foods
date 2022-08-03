@@ -7,7 +7,7 @@ const Loader = () => {
     return (
         <div className="loaderContainer">
             <div>
-                <img src={recipeImg} />
+                <img src={recipeImg} alt="loader" />
                 <p>LOADING...</p>
             </div>
         </div>

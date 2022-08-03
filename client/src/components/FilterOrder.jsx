@@ -1,8 +1,5 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { buildUrl } from "../helpers/url";
-import { getDiets } from "../redux/actions";
 
 const FilterOrder = ({ diets, parameters }) => {
 
